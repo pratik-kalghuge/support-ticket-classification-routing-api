@@ -1,0 +1,308 @@
+{
+  "source_commit": "72ea2203180d14a416b579c657033ecd21e59a11",
+  "source_sha256": "6f81102b0100b97b8468eb04368033a23206bf1fde9d53500d5806ec1001a434",
+  "seed": 42,
+  "versions": {
+    "python": "3.14.2",
+    "sklearn": "1.9.1",
+    "pandas": "3.1.1",
+    "numpy": "2.5.5"
+  },
+  "data": {
+    "source_rows": 26872,
+    "selected_rows": 14964,
+    "blank_rows_removed": 0,
+    "conflicting_rows_removed": 0,
+    "duplicate_rows_removed": 1976,
+    "unique_rows": 12988,
+    "class_counts": {
+      "Account Access": 5358,
+      "Billing": 1986,
+      "Order Management": 3067,
+      "Refunds": 2577
+    }
+  },
+  "splits": {
+    "train": {
+      "rows": 9091,
+      "class_counts": {
+        "Account Access": 3750,
+        "Billing": 1390,
+        "Order Management": 2147,
+        "Refunds": 1804
+      }
+    },
+    "validation": {
+      "rows": 1948,
+      "class_counts": {
+        "Account Access": 804,
+        "Billing": 298,
+        "Order Management": 460,
+        "Refunds": 386
+      }
+    },
+    "test": {
+      "rows": 1949,
+      "class_counts": {
+        "Account Access": 804,
+        "Billing": 298,
+        "Order Management": 460,
+        "Refunds": 387
+      }
+    }
+  },
+  "labels": [
+    "Account Access",
+    "Billing",
+    "Order Management",
+    "Refunds"
+  ],
+  "threshold_policy": {
+    "target_validation_accuracy": 0.98,
+    "minimum_threshold": 0.5,
+    "rule": "Maximize coverage among candidates meeting target; otherwise manual review all"
+  },
+  "validation_thresholds": [
+    {
+      "threshold": 0.5,
+      "auto_routed": 1942,
+      "coverage": 0.9969199178644764,
+      "accuracy": 0.9989701338825953
+    },
+    {
+      "threshold": 0.6,
+      "auto_routed": 1939,
+      "coverage": 0.9953798767967146,
+      "accuracy": 0.999484270242393
+    },
+    {
+      "threshold": 0.7,
+      "auto_routed": 1932,
+      "coverage": 0.9917864476386037,
+      "accuracy": 1.0
+    },
+    {
+      "threshold": 0.75,
+      "auto_routed": 1928,
+      "coverage": 0.9897330595482546,
+      "accuracy": 1.0
+    },
+    {
+      "threshold": 0.8,
+      "auto_routed": 1912,
+      "coverage": 0.9815195071868583,
+      "accuracy": 1.0
+    },
+    {
+      "threshold": 0.85,
+      "auto_routed": 1897,
+      "coverage": 0.9738193018480493,
+      "accuracy": 1.0
+    },
+    {
+      "threshold": 0.9,
+      "auto_routed": 1846,
+      "coverage": 0.9476386036960985,
+      "accuracy": 1.0
+    },
+    {
+      "threshold": 0.95,
+      "auto_routed": 1654,
+      "coverage": 0.8490759753593429,
+      "accuracy": 1.0
+    },
+    {
+      "threshold": 0.99,
+      "auto_routed": 715,
+      "coverage": 0.36704312114989734,
+      "accuracy": 1.0
+    },
+    {
+      "threshold": 1.0,
+      "auto_routed": 0,
+      "coverage": 0.0,
+      "accuracy": null
+    }
+  ],
+  "chosen_validation_routing": {
+    "threshold": 0.5,
+    "auto_routed": 1942,
+    "coverage": 0.9969199178644764,
+    "accuracy": 0.9989701338825953
+  },
+  "baseline_test": {
+    "accuracy": 0.4125192406362237,
+    "macro_f1": 0.14602252088630585,
+    "confusion_matrix": [
+      [
+        804,
+        0,
+        0,
+        0
+      ],
+      [
+        298,
+        0,
+        0,
+        0
+      ],
+      [
+        460,
+        0,
+        0,
+        0
+      ],
+      [
+        387,
+        0,
+        0,
+        0
+      ]
+    ],
+    "classification_report": {
+      "Account Access": {
+        "precision": 0.4125192406362237,
+        "recall": 1.0,
+        "f1-score": 0.5840900835452234,
+        "support": 804.0
+      },
+      "Billing": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 298.0
+      },
+      "Order Management": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 460.0
+      },
+      "Refunds": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 387.0
+      },
+      "accuracy": 0.4125192406362237,
+      "macro avg": {
+        "precision": 0.10312981015905592,
+        "recall": 0.25,
+        "f1-score": 0.14602252088630585,
+        "support": 1949.0
+      },
+      "weighted avg": {
+        "precision": 0.17017212389508665,
+        "recall": 0.4125192406362237,
+        "f1-score": 0.240948397727224,
+        "support": 1949.0
+      }
+    }
+  },
+  "model_test": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "confusion_matrix": [
+      [
+        804,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        298,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        460,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        387
+      ]
+    ],
+    "classification_report": {
+      "Account Access": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 804.0
+      },
+      "Billing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 298.0
+      },
+      "Order Management": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 460.0
+      },
+      "Refunds": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 387.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1949.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1949.0
+      }
+    }
+  },
+  "test_routing": {
+    "threshold": 0.5,
+    "auto_routed": 1949,
+    "coverage": 1.0,
+    "accuracy": 1.0
+  },
+  "mistakes": [],
+  "validation_mistakes": [
+    {
+      "text": "assistance informing of an error with onlinepayment",
+      "actual": "Billing",
+      "predicted": "Account Access",
+      "confidence": 0.6919488558968268,
+      "routing_decision": "auto_route"
+    },
+    {
+      "text": "I get an error when I try to check out",
+      "actual": "Billing",
+      "predicted": "Refunds",
+      "confidence": 0.37918136784616047,
+      "routing_decision": "manual_review"
+    },
+    {
+      "text": "need to report an issue with paymentr",
+      "actual": "Billing",
+      "predicted": "Account Access",
+      "confidence": 0.5837260091952472,
+      "routing_decision": "auto_route"
+    },
+    {
+      "text": "i have to see the damn ETA of my delivery helpme",
+      "actual": "Order Management",
+      "predicted": "Account Access",
+      "confidence": 0.3981899035180885,
+      "routing_decision": "manual_review"
+    }
+  ]
+}
